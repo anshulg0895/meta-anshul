@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% stylesheet_link_tag "details.css" %>
+  </head>
+  <body>
+    <h1> Details</h1>
+    <p id="name">
+      <strong>Name:</strong>
+      <%= @admin.name %>
+    </p>
+
+    <p id="dob">
+      <strong>DOB:</strong>
+      <%= @admin.dob %>
+    </p>
+
+    <p id="city">
+      <strong>City:</strong>
+      <%= @admin.city %>
+    </p>
+
+    <p id="regno">
+      <strong>Reg_no:</strong>
+      <%= @admin.reg_no %>
+    </p>
+  </body>
+</html>

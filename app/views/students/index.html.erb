@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% stylesheet_link_tag "table.css" %>
+  </head>
+  <body>
+    <h1>List of Students</h1>
+    <table cellspacing = "20">
+      <tr>
+        <th>Name</th>
+        <th>DOB</th>
+        <th>City</th>
+        <th>Reg_no</th>
+      </tr>
+
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.name %></td>
+          <td><%= student.dob %></td>
+          <td><%= student.city %></td>
+          <td><%= student.reg_no %></td>
+          <td><%= link_to 'Show', student_path(student) %></td>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>

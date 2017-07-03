@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% stylesheet_link_tag "New_style.css" %>
+  </head>
+  <body>
+    <h1>Student Form</h1>
+    <%= form_for :student, url: students_path do |f| %>
+      <p id="name">
+        <%= f.label :Name %><br>
+        <%= f.text_field :name, :id => "nam" %>
+      </p>
+
+      <p id="dob">
+        <%= f.label :DOB %><br>
+        <%= f.text_field :dob, :id => "birthdate" %>
+      </p>
+
+      <p id="city">
+        <%= f.label :City %><br>
+        <%= f.text_field :city, :id => "cityfield" %>
+      </p>
+
+      <p id="regno">
+        <%= f.label :Reg_no %><br>
+        <%= f.text_field :regno, :id => "reg" %>
+      </p>
+
+      <p>
+        <%= f.submit :Submit, :id => "submit" %> <%= link_to "logout", :controller=> "welcome", :action=> "index", :id => "log" %>
+      </p>
+    <% end %>
+  </body>
+</html>
