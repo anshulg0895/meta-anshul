@@ -1,9 +1,16 @@
 class StudentsController < ApplicationController
   def new
+    if Admission.current_user == false
+      redirect_to :controller=> "welcome", :action=> "index"
+    end
   end
 
   def index
-    @students = Admission.all
+    if Admission.current_user == true
+      @students = Admission.all
+    else
+      redirect_to :controller=> "welcome", :action=> "index"
+    end
   end
 
   def create
@@ -13,7 +20,11 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @admin = Admission.find(params[:id])
+    if Admission.current_user == true
+      @admin = Admission.find(params[:id])
+    else
+      redirect_to :controller=> "welcome", :action=> "index"
+    end
   end
 
 end

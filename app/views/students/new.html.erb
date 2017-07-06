@@ -27,7 +27,8 @@
       </p>
 
       <p>
-        <%= f.submit :Submit, :id => "submit" %> <%= link_to "logout", :controller=> "welcome", :action=> "index", :id => "log" %>
+        <%= f.submit :Submit, :id => "submit" %> <%= link_to "logout", :controller=> "welcome", :action=> "index", :id => "log" %> <%= link_to "Show Details",
+        :controller=> "students", :action=> "index" %>
       </p>
     <% end %>
   </body>
