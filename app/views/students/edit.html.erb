@@ -1,0 +1,26 @@
+<h1>Edit Student Detail</h1>
+  <%= form_for @admission, as: :admission, url: student_path(@admission), method: :patch do |f| %>
+    <p>
+      <%= f.label :Name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :DOB %><br>
+      <%= f.text_field :dob %>
+    </p>
+
+    <p>
+      <%= f.label :City %><br>
+      <%= f.text_field :city %>
+    </p>
+
+    <p>
+      <%= f.label :Reg_no %><br>
+      <%= f.text_field :reg_no %>
+    </p>
+
+    <p>
+        <%= f.submit %>
+    </p>
+  <% end %>

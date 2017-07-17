@@ -13,13 +13,15 @@
         <th>Reg_no</th>
       </tr>
 
-      <% @students.each do |student| %>
+      <% @admissions.each do |student| %>
         <tr>
           <td><%= student.name %></td>
           <td><%= student.dob %></td>
           <td><%= student.city %></td>
           <td><%= student.reg_no %></td>
           <td><%= link_to 'Show', student_path(student) %></td>
+          <td><%= link_to 'Delete', student_path(student), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_student_path(student) %></td>
         </tr>
       <% end %>
     </table>
