@@ -1,6 +1,9 @@
 <h1>Edit Student Detail</h1>
   <%= form_for @admission, as: :admission, url: student_path(@admission), method: :patch do |f| %>
     <p>
+      <%= link_to :back, students_path %>
+    </p>
+    <p>
       <%= f.label :Name %><br>
       <%= f.text_field :name %>
     </p>
